@@ -18,7 +18,6 @@ const routes = [
   { path: '/test', component: Test },
 ]
 
-
 const router = new VueRouter({
   mode: 'history',
   routes // сокращённая запись для `routes: routes`
@@ -30,6 +29,5 @@ const store = new Vuex.Store(STORE)
 new Vue({
   router,
   store,
-  SessionID,
   render: h => h(App),
 }).$mount('#app')
