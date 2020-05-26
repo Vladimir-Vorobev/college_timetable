@@ -40,29 +40,41 @@ export default {
                             classArr[j][days[g]][4].time = rows[8][2]
                         }
                     }
-                    if (k < 48){
+                    try{
                         let r = 0
                         let d = Math.floor(k / 10)
                         if(s == 4) s = 0
                         else s += 1
                         for(let h = 3; h < rows[1].length; h += 5){
-                            classArr[r][days[d]][s].name = rows[k][h]
-                            classArr[r][days[d]][s].teacher = rows[k + 1][h]
-                            classArr[r][days[d]][s].classroom = rows[k][h + 2]
-                            if(rows[k + 1][h + 1] != null){
-                                if(classArr[r][days[d]][s].name == null) classArr[r][days[d]][s].name = rows[k][h + 1]
-                                else{
-                                    classArr[r][days[d]][s].name += ', '
-                                    classArr[r][days[d]][s].name += rows[k][h + 1]
-                                }
-                                if (classArr[r][days[d]][s].teacher == null) classArr[r][days[d]][s].teacher = rows[k + 1][h + 1]
-                                else{
-                                    classArr[r][days[d]][s].teacher += ', '
-                                    classArr[r][days[d]][s].teacher += rows[k + 1][h + 1]
-                                }
+                            if(rows[k][h] == '-'){
+                                classArr[r][days[d]][s].nameS = rows[k][h + 1]
+                                classArr[r][days[d]][s].teacherS = rows[k + 1][h + 1]
+                                classArr[r][days[d]][s].classroomS = rows[k][h + 2]
+                            }
+                            else if(rows[k][h + 1] == '-'){
+                                classArr[r][days[d]][s].nameF = rows[k][h]
+                                classArr[r][days[d]][s].teacherF = rows[k + 1][h]
+                                classArr[r][days[d]][s].classroomF = rows[k][h + 2] 
+                            }
+                            else if(rows[k][h] != null && rows[k][h + 1] != null){
+                                classArr[r][days[d]][s].nameS = rows[k][h + 1]
+                                classArr[r][days[d]][s].teacherS = rows[k + 1][h + 1] 
+                                classArr[r][days[d]][s].nameF = rows[k][h]
+                                classArr[r][days[d]][s].teacherF = rows[k + 1][h]
+                                let classroom = rows[k][h + 2]
+                                classroom = classroom.split(',')
+                                classArr[r][days[d]][s].classroomF = classroom[0].trim()
+                                classArr[r][days[d]][s].classroomS = classroom[1].trim()
+                            }
+                            else{
+                                classArr[r][days[d]][s].name = rows[k][h]
+                                classArr[r][days[d]][s].teacher = rows[k + 1][h]
+                                classArr[r][days[d]][s].classroom = rows[k][h + 2] 
                             }
                             r++
-                        }
+                        }   
+                    } catch (err){
+                        console.log(err)
                     }
                 }
                 console.log(classArr)
