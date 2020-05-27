@@ -1,28 +1,28 @@
 <template>
     <div class="main container">
         <select class="custom-select custom-select-sm mb-3 events" onchange="location.href=this.value">
-            <option value="/groups-timetable" selected>Список групп</option>
-            <option value="/teachers-timetable">Список учителей</option>
-            <option value="/classrooms-timetable">Список аудиторий</option>
+            <option value="/groups-list" selected>Список групп</option>
+            <option value="/teachers-list">Список учителей</option>
+            <option value="/classrooms-list">Список аудиторий</option>
         </select>
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none list">
                 <div class="grade row">
                     <span class="num_grade col-12">1 курс</span>
-                    <div class="name_group col-12">t1</div>
-                    <div class="name_group col-12">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">2 курс</span>
-                    <div class="name_group col-12">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">3 курс</span>
-                    <div class="name_group col-12">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">4 курс</span>
-                    <div class="name_group col-12">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
                 </div>
         </div>
         <!-- PC -->
@@ -30,20 +30,20 @@
             <div class="row">
                 <div class="grade col-3">
                     <span class="num_grade">1 курс</span>
-                    <div class="name_group">t1</div>
-                    <div class="name_group">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">2 курс</span>
-                    <div class="name_group">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">3 курс</span>
-                    <div class="name_group">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">4 курс</span>
-                    <div class="name_group">t1</div>
+                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@
 <script>
 
 export default {
-    name: 'GroupsTimetable',
+    name: 'GroupsList',
     
 }
 </script>
@@ -90,5 +90,13 @@ export default {
 .name_group{
     border: 1.5px solid #555;
     margin-bottom: 5px;
+}
+.group_link{
+    text-decoration: none;
+    color: #2c3e50;
+}
+.name_group:hover{
+    text-decoration: none;
+    background-color: #e0e0e0;
 }
 </style>
