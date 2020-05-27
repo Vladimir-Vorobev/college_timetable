@@ -19,5 +19,6 @@ export default {
 <style scoped>
 .main{
     padding-top: 110px !important;
+    min-height: 100vh;
 }
 </style>

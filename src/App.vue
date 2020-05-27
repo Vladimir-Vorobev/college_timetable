@@ -27,7 +27,6 @@ body {
   height: 100% !important;
   padding: 0px;
   margin: 0px;
-  background-color: rgb(231, 231, 231);
 }
 body {
   margin: 0px;
