@@ -22,13 +22,13 @@
                     <div class="lesson">
                         <div class="row">
                             <div class="col-7">1 <span class="time">8:30-9:15</span></div>
-                            <div class="col-5"><a class="s_link" href="schedule_class.html">каб. 206</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable">каб. 206</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12"> 
                                 <span class="lesson_name">Информатика</span>
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="schedule_teacher.html">Петров Игорь Иванович</a></p>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">Петров Игорь Иванович</a></p>
                             </div>
                         </div>
                     </div>
@@ -47,9 +47,9 @@
                         <div class="col-6">
                             <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">Информатика</span>
-                            <p class="teacher"><a class="s_link" href="schedule_teacher.html">Петров Игорь Иванович</a></p>
+                            <p class="teacher"><a class="s_link" href="teacher-timetable">Петров Игорь Иванович</a></p>
                         </div>
-                        <div class="col-2"> <a class="s_link" href="schedule_class.html">каб. 206</a> </div>
+                        <div class="col-2"> <a class="s_link" href="classroom-timetable">каб. 206</a> </div>
                     </div>
                 </div>
             </div>
