@@ -43,13 +43,13 @@
                 </div>
                 <div class="card-body">
                     <div class="row  lesson">
-                        <div class="col-4 col-md-4">1 <span class="time">8:30-9:15</span></div>
-                        <div class="col-5 col-md-6">
+                        <div class="col-4">1 <span class="time">8:30-9:15</span></div>
+                        <div class="col-6">
                             <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">Информатика</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">Петров Игорь Иванович</a></p>
                         </div>
-                        <div class="col-3 col-md-2"> <a class="s_link" href="schedule_class.html">каб. 206</a> </div>
+                        <div class="col-2"> <a class="s_link" href="schedule_class.html">каб. 206</a> </div>
                     </div>
                 </div>
             </div>
