@@ -1,3 +1,14 @@
+<!--  
+    еженедельно:
+    <span class="square square-0" data-tooltip="Еженедельно"></span>
+
+    четная неделя:
+    <span class="square square-2" data-tooltip="Четная неделя"></span>
+
+    нечетная неделя:
+    <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+-->
+
 <template>
     <div class="main">
         <!--Mobile-->
