@@ -96,6 +96,10 @@ export default {
         color: #6c6d6f;
         padding-left: 0.2em;
     }
+    .square{
+        margin-left: 5px;
+        margin-bottom: 2px;
+    }
 }
 @media (min-width: 993px) {  
     .day{
@@ -121,6 +125,10 @@ export default {
     .time{
         color: #6c6d6f;
         padding-left: 0.2em;
+    }
+    .square{
+        margin-right: 5px;
+        margin-bottom: 2px;
     }
 }
 
