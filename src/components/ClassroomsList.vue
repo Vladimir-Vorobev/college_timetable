@@ -2,7 +2,7 @@
     <div class="main container">
         <select class="custom-select custom-select-sm mb-3 events" onchange="location.href=this.value">
             <option value="/groups-list">Список групп</option>
-            <option value="/teachers-list">Список учителей</option>
+            <option value="/teachers-list">Список преподавателей</option>
             <option value="/classrooms-list" selected>Список аудиторий</option>
         </select>
         <div class="list">
