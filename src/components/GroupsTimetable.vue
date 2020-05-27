@@ -1,9 +1,9 @@
 <template>
     <div class="main container">
         <select class="custom-select custom-select-sm mb-3 events" onchange="location.href=this.value">
-            <option value="/groups-timetable" selected>Расписание групп</option>
-            <option value="/teachers-timetable">Расписание учителей</option>
-            <option value="/classrooms-timetable">Расписание аудиторий</option>
+            <option value="/groups-timetable" selected>Список групп</option>
+            <option value="/teachers-timetable">Список учителей</option>
+            <option value="/classrooms-timetable">Список аудиторий</option>
         </select>
     </div>
 </template>

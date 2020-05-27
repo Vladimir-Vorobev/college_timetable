@@ -11,6 +11,10 @@ import TeachersTimetable from './components/TeachersTimetable.vue'
 import ClassroomsTimetable from './components/ClassroomsTimetable.vue'
 import UploadFile from './components/UploadFile.vue'
 
+import GroupTimetable from './components/GroupTimetable.vue'
+import TeacherTimetable from './components/TeacherTimetable.vue'
+import ClassroomTimetable from './components/ClassroomTimetable.vue'
+
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -21,6 +25,9 @@ const routes = [
   { path: '/groups-timetable', component: GroupsTimetable },
   { path: '/teachers-timetable', component: TeachersTimetable },
   { path: '/classrooms-timetable', component: ClassroomsTimetable },
+  { path: '/group-timetable', component: GroupTimetable },
+  { path: '/teacher-timetable', component: TeacherTimetable },
+  { path: '/classroom-timetable', component: ClassroomTimetable },
   { path: '/upload-file', component: UploadFile },
 ]
 
