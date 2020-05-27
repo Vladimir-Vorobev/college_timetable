@@ -1,3 +1,15 @@
+<!--  
+    еженедельно:
+    <span class="square square-0" data-tooltip="Еженедельно"></span>
+
+    четная неделя:
+    <span class="square square-2" data-tooltip="Четная неделя"></span>
+
+    нечетная неделя:
+    <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+-->
+
+
 <template>
     <div class="main">
         <!--Mobile-->
@@ -15,7 +27,7 @@
                         <div class="row">
                             <div class="col-12"> 
                                 <span class="lesson_name">Информатика</span>
-                                <span data-toggle="tooltip" class="square square-2"  data-placement="top" data-title="Четная неделя"></span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <p class="teacher"><a class="s_link" href="schedule_teacher.html">Петров Игорь Иванович</a></p>
                             </div>
                         </div>
@@ -33,7 +45,7 @@
                     <div class="row  lesson">
                         <div class="col-4 col-md-4">1 <span class="time">8:30-9:15</span></div>
                         <div class="col-5 col-md-6">
-                            <span data-toggle="tooltip" class="square square-2" data-placement="top"  title="Четная неделя" data-title="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">Информатика</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">Петров Игорь Иванович</a></p>
                         </div>
@@ -46,14 +58,14 @@
 </template>
 
 <script>
-
 export default {
     name: 'GroupTimetable',
 };
-
 </script>
 
 <style scoped>
+@import '/assets/styles/tooltip.css';
+
 .main{
     padding-top: 110px !important;
     min-height: 100vh;

@@ -15,6 +15,7 @@ import GroupTimetable from './components/GroupTimetable.vue'
 import TeacherTimetable from './components/TeacherTimetable.vue'
 import ClassroomTimetable from './components/ClassroomTimetable.vue'
 
+require('@/assets/styles/tooltip.css')
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
