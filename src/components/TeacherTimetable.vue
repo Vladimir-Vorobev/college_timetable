@@ -13,6 +13,7 @@
     <div class="main">
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
+            <h3>Расписание Петрова Игорья Ивановича</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -37,6 +38,7 @@
 
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
+            <h3 style="text-align: center;">Расписание Петрова Игорья Ивановича</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -74,8 +76,8 @@ export default {
 }
 @media (max-width: 992px) {  
     .day{
-    font-size: 1.2em;
-    margin-bottom: 1em;
+        font-size: 1.2em;
+        margin-top: 1em;
     }
     .name-day{
         font-size: 1.4em;
@@ -106,7 +108,7 @@ export default {
 @media (min-width: 993px) {  
     .day{
         font-size: 1.3em;
-        margin-bottom: 1em;
+        margin-top: 1em;
     }
     .name-day{
         font-size: 1.5em;
