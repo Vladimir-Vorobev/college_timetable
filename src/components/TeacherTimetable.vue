@@ -38,7 +38,7 @@
 
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
-            <h3 style="text-align: center;">Расписание Петрова Игорья Ивановича</h3>
+            <h3 style="text-align: center;">Расписание Петрова Игоря Ивановича</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
