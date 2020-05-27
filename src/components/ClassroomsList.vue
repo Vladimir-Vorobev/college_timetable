@@ -6,8 +6,8 @@
             <option value="/classrooms-list" selected>Список аудиторий</option>
         </select>
         <div class="list">
-            <div class="name"><a href="teacher-timetable">Аудитория 206</a></div>
-            <div class="name"><a href="teacher-timetable">Аудитория 108</a></div>
+            <div class="name"><a href="classroom-timetable">Аудитория 206</a></div>
+            <div class="name"><a href="classroom-timetable">Аудитория 108</a></div>
         </div>
     </div>
 </template>
