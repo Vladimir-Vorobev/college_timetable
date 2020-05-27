@@ -6,7 +6,10 @@ import App from './App.vue'
 import {STORE} from '../store'
 
 import MainPage from './components/MainPage.vue'
-import Test from './components/Test.vue'
+import GroupsTimetable from './components/GroupsTimetable.vue'
+import TeachersTimetable from './components/TeachersTimetable.vue'
+import ClassroomsTimetable from './components/ClassroomsTimetable.vue'
+import UploadFile from './components/UploadFile.vue'
 
 
 Vue.config.productionTip = false
@@ -15,7 +18,10 @@ Vue.use(Vuex)
 
 const routes = [
   { path: '/', component: MainPage },
-  { path: '/test', component: Test },
+  { path: '/groups-timetable', component: GroupsTimetable },
+  { path: '/teachers-timetable', component: TeachersTimetable },
+  { path: '/classrooms-timetable', component: ClassroomsTimetable },
+  { path: '/upload-file', component: UploadFile },
 ]
 
 const router = new VueRouter({
