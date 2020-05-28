@@ -1,8 +1,12 @@
 <template>
     <div class="main container">
-            
-            <input type="file" ref="file" @change="file()">
-            <button type="submit" @click="add()">Отправить</button>
+        <form style="font-size: 1.3em;">
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Добавить расписание</label>
+                <input type="file" ref="file" class="form-control-file" @change="file()">
+            </div>
+            <button type="submit" @click="add()" class="btn btn-primary btn-lg">Отправить</button>
+        </form>
     </div>
 </template>
 

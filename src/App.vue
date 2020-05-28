@@ -28,9 +28,4 @@ body, html{
     width: 100%;
     margin: 0px;
 }
-
-.main{
-    margin-top: 100px;
-    height: 100%;
-}
 </style>

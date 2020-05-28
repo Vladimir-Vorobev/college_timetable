@@ -14,6 +14,8 @@ import Teacher from './components/Teacher.vue'
 import Classroom from './components/Classroom.vue'
 import UploadFile from './components/UploadFile.vue'
 
+require('@/assets/styles/tooltip.css')
+
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(Vuex)
