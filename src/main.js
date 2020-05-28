@@ -9,6 +9,9 @@ import MainPage from './components/MainPage.vue'
 import GroupsTimetable from './components/GroupsTimetable.vue'
 import TeachersTimetable from './components/TeachersTimetable.vue'
 import ClassroomsTimetable from './components/ClassroomsTimetable.vue'
+import Group from './components/Group.vue'
+import Teacher from './components/Teacher.vue'
+import Classroom from './components/Classroom.vue'
 import UploadFile from './components/UploadFile.vue'
 
 
@@ -21,6 +24,9 @@ const routes = [
   { path: '/groups-timetable', component: GroupsTimetable },
   { path: '/teachers-timetable', component: TeachersTimetable },
   { path: '/classrooms-timetable', component: ClassroomsTimetable },
+  { path: '/groups-timetable/:id', component: Group },
+  { path: '/teachers-timetable/:id', component: Teacher },
+  { path: '/classrooms-timetable/:id', component: Classroom },
   { path: '/upload-file', component: UploadFile },
 ]
 

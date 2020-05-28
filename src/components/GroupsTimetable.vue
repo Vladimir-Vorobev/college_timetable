@@ -5,6 +5,9 @@
             <option value="/teachers-timetable">Расписание учителей</option>
             <option value="/classrooms-timetable">Расписание аудиторий</option>
         </select>
+        <router-link :to="'/groups-timetable/' + item.group" v-for="item in groups" :key="item.group">
+            Группа {{ item.group }}
+        </router-link>
     </div>
 </template>
 
@@ -12,6 +15,17 @@
 
 export default {
     name: 'GroupsTimetable',
+    data(){
+        return{
+            groups: [
+                { group: '1' },
+                { group: '2' },
+                { group: '3' },
+                { group: '4' },
+                { group: '5' },
+            ]
+        }
+    },
     
 }
 </script>

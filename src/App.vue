@@ -14,10 +14,6 @@ export default {
 </script>
 
 <style>
-body {
-    width:100% !important; 
-    height:100% !important; 
-}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -29,7 +25,14 @@ body {
   margin: 0px;
   background-color: rgb(231, 231, 231);
 }
-body {
-  margin: 0px;
+body, html{
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+}
+
+.main{
+    margin-top: 100px;
+    height: 100%;
 }
 </style>
