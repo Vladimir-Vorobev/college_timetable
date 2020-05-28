@@ -13,7 +13,7 @@
     <div class="main">
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
-            <h3>Расписание Петрова Игорья Ивановича</h3>
+            <h3>{{teacher}}</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -38,7 +38,7 @@
 
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
-            <h3 style="text-align: center;">Расписание Петрова Игоря Ивановича</h3>
+            <h3 style="text-align: center;">{{teacher}}</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -63,7 +63,11 @@
 
 export default {
     name: 'Teacher',
-    
+    data(){
+        return{
+            teacher: this.$route.params.id
+        }
+    },
 }
 </script>
 

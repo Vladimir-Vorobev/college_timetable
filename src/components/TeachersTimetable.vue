@@ -6,8 +6,9 @@
             <option value="/classrooms-timetable">Расписание аудиторий</option>
         </select>
         <div class="list">
-            <div class="name"><a href="#">Иванов Иван Иванович</a></div>
-            <div class="name"><a href="#">Иванов Иван Иванович</a></div>
+            <router-link class="name" :to="'/teachers-timetable/' + item.teacher" v-for="item in teachers" :key="item.teacher">
+                <div class="name_group">{{ item.teacher }} </div>
+            </router-link> 
         </div>
     </div>
 </template>
@@ -16,7 +17,17 @@
 
 export default {
     name: 'TeachersTimetable',
-    
+    data(){
+        return{
+            teachers:[
+                { teacher: 'Иванов И.И.' },
+                { teacher: 'Петров К.А.' },
+                { teacher: 'Волков Д.П.' },
+                { teacher: 'Жукова О.В.' },
+                { teacher: 'Варшавская А.Л.' },
+            ]
+        }
+    }
 }
 </script>
 
