@@ -18,14 +18,21 @@
 export default {
     name: 'TeachersTimetable',
     data(){
+        let teachers = []
+        fetch('http://37.228.118.76:3001/api2/getTeacherData', {
+            method: 'get',
+        })
+        .then(response => {
+            console.log("res", response)
+            return response.json()
+        })
+        .then(data => {
+            for(let i = 0; i < data.length; i++){
+                teachers.push({teacher: data[i]})
+            }
+        })
         return{
-            teachers:[
-                { teacher: 'Иванов И.И.' },
-                { teacher: 'Петров К.А.' },
-                { teacher: 'Волков Д.П.' },
-                { teacher: 'Жукова О.В.' },
-                { teacher: 'Варшавская А.Л.' },
-            ]
+            teachers
         }
     }
 }

@@ -6,8 +6,9 @@
             <option value="/classrooms-timetable" selected>Расписание аудиторий</option>
         </select>
         <div class="list">
-            <div class="name"><a href="#">Аудитория 206</a></div>
-            <div class="name"><a href="#">Аудитория 108</a></div>
+            <router-link class="name" :to="'/classrooms-timetable/' + item.classroom" v-for="item in classrooms" :key="item.classroom">
+                <div class="name_group">{{ item.classroom }} </div>
+            </router-link> 
         </div>
     </div>
 </template>
@@ -16,6 +17,24 @@
 
 export default {
     name: 'ClassroomsTimetable',
+    data(){
+        let classrooms = []
+        fetch('http://37.228.118.76:3001/api2/getClassroomData', {
+            method: 'get',
+        })
+        .then(response => {
+            console.log("res", response)
+            return response.json()
+        })
+        .then(data => {
+            for(let i = 0; i < data.length; i++){
+                classrooms.push({classroom: data[i]})
+            }
+        })
+        return{
+            classrooms
+        }
+    }
     
 }
 </script>

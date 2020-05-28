@@ -72,35 +72,36 @@
 export default {
     name: 'GroupsTimetable',
     data(){
+        let groups1 = []
+        let groups2 = []
+        let groups3 = []
+        let groups4 = []
+        fetch('http://37.228.118.76:3001/api2/getGroupData', {
+            method: 'get',
+        })
+        .then(response => {
+            console.log("res", response)
+            return response.json()
+        })
+        .then(data => {
+            for(let i = 0; i < data[0].length; i++){
+                groups1.push({group: data[0][i].replace(/([/]+)/g, '-')})
+            }
+            for(let i = 0; i < data[1].length; i++){
+                groups2.push({group: data[1][i].replace(/([/]+)/g, '-')})
+            }
+            for(let i = 0; i < data[2].length; i++){
+                groups3.push({group: data[2][i].replace(/([/]+)/g, '-')})
+            }
+            for(let i = 0; i < data[3].length; i++){
+                groups4.push({group: data[3][i].replace(/([/]+)/g, '-')})
+            }
+        })
         return{
-            groups1: [
-                { group: '1.1' },
-                { group: '2.1' },
-                { group: '3.1' },
-                { group: '4.1' },
-                { group: '5.1' },
-            ],
-            groups2: [
-                { group: '1.2' },
-                { group: '2.2' },
-                { group: '3.2' },
-                { group: '4.2' },
-                { group: '5.2' },
-            ],
-            groups3: [
-                { group: '1.3' },
-                { group: '2.3' },
-                { group: '3.3' },
-                { group: '4.3' },
-                { group: '5.3' },
-            ],
-            groups4: [
-                { group: '1.4' },
-                { group: '2.4' },
-                { group: '3.4' },
-                { group: '4.4' },
-                { group: '5.4' },
-            ]
+            groups1,
+            groups2,
+            groups3,
+            groups4,
         }
     },
     
