@@ -11,7 +11,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <router-link to="/groups-timetable" class="router-link">
+              <router-link to="/groups-list" class="router-link">
                   <a class="nav-link" ref="allEvents">Расписание</a>
               </router-link>
             </li>

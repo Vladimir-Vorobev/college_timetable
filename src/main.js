@@ -14,7 +14,6 @@ import Teacher from './components/Teacher.vue'
 import Classroom from './components/Classroom.vue'
 import UploadFile from './components/UploadFile.vue'
 
-
 Vue.config.productionTip = false
 Vue.use(VueRouter)
 Vue.use(Vuex)

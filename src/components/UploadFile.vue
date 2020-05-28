@@ -1,12 +1,8 @@
 <template>
     <div class="main container">
-        <form style="font-size: 1.3em;">
-            <div class="form-group">
-                <label for="exampleFormControlFile1">Добавте расписание</label>
-                <input type="file" ref="file" class="form-control-file" id="exampleFormControlFile1" @change="file()">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg" @click="add()">Отправить</button>
-        </form>
+            
+            <input type="file" ref="file" @change="file()">
+            <button type="submit" @click="add()">Отправить</button>
     </div>
 </template>
 
@@ -113,5 +109,6 @@ export default {
 <style scoped>
 .main{
     padding-top: 110px !important;
+    min-height: 100vh;
 }
 </style>
