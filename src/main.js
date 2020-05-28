@@ -6,16 +6,13 @@ import App from './App.vue'
 import {STORE} from '../store'
 
 import MainPage from './components/MainPage.vue'
-import GroupsList from './components/GroupsList.vue'
-import TeachersList from './components/TeachersList.vue'
-import ClassroomsList from './components/ClassroomsList.vue'
+import GroupsTimetable from './components/GroupsTimetable.vue'
+import TeachersTimetable from './components/TeachersTimetable.vue'
+import ClassroomsTimetable from './components/ClassroomsTimetable.vue'
+import Group from './components/Group.vue'
+import Teacher from './components/Teacher.vue'
+import Classroom from './components/Classroom.vue'
 import UploadFile from './components/UploadFile.vue'
-
-import GroupTimetable from './components/GroupTimetable.vue'
-import TeacherTimetable from './components/TeacherTimetable.vue'
-import ClassroomTimetable from './components/ClassroomTimetable.vue'
-
-require('@/assets/styles/tooltip.css')
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
@@ -23,12 +20,12 @@ Vue.use(Vuex)
 
 const routes = [
   { path: '/', component: MainPage },
-  { path: '/groups-list', component: GroupsList },
-  { path: '/teachers-list', component: TeachersList },
-  { path: '/classrooms-list', component: ClassroomsList },
-  { path: '/group-timetable', component: GroupTimetable },
-  { path: '/teacher-timetable', component: TeacherTimetable },
-  { path: '/classroom-timetable', component: ClassroomTimetable },
+  { path: '/groups-timetable', component: GroupsTimetable },
+  { path: '/teachers-timetable', component: TeachersTimetable },
+  { path: '/classrooms-timetable', component: ClassroomsTimetable },
+  { path: '/groups-timetable/:id', component: Group },
+  { path: '/teachers-timetable/:id', component: Teacher },
+  { path: '/classrooms-timetable/:id', component: Classroom },
   { path: '/upload-file', component: UploadFile },
 ]
 
