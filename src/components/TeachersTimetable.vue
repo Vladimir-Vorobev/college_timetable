@@ -40,6 +40,14 @@ export default {
     margin-top: 1em;
     font-size: 1.3em;
 }
+.list a{
+    text-decoration: none;
+    color: #2c3e50 !important;
+}
+.list a:hover{
+    text-decoration: none;
+    color: #FF5722 !important;
+}
 .name{
     margin-bottom: 1em;
 }
@@ -51,4 +59,5 @@ export default {
     text-decoration: none;
     color: #FF5722;
 }
+
 </style>
