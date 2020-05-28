@@ -14,7 +14,7 @@
     <div class="main">
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
-            <h3>Расписание группы ИС-21/9</h3>
+            <h3>Расписание группы {{groupNumber}}</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -38,7 +38,7 @@
         </div>
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
-            <h3 style="text-align: center;">Расписание группы ИС-21/9</h3>
+            <h3 style="text-align: center;">Расписание группы {{groupNumber}}</h3>
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
@@ -63,10 +63,11 @@
 
 export default {
     name: 'Group',
-    mounted(){
-        console.log(this.$route.params.id)
-    }
-    
+    data(){
+        return{
+            groupNumber: this.$route.params.id
+        }
+    },   
 }
 </script>
 

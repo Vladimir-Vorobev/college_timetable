@@ -12,19 +12,27 @@
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none list">
                 <div class="grade row">
                     <span class="num_grade col-12">1 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups1" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">2 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups2" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">3 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups3" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">4 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group col-12">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups4" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
         </div>
         <!-- PC -->
@@ -32,19 +40,27 @@
             <div class="row">
                 <div class="grade col-3">
                     <span class="num_grade">1 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups1" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">2 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
+                   <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups2" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">3 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups3" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">4 курс</span>
-                    <a href="group-timetable" style="width: 100%;" class="group_link"><div class="name_group">t1</div></a>
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups4" :key="item.group">
+                        <div class="name_group"> Группа {{ item.group }} </div>
+                    </router-link> 
                 </div>
             </div>
         </div>
@@ -57,12 +73,33 @@ export default {
     name: 'GroupsTimetable',
     data(){
         return{
-            groups: [
-                { group: '1' },
-                { group: '2' },
-                { group: '3' },
-                { group: '4' },
-                { group: '5' },
+            groups1: [
+                { group: '1.1' },
+                { group: '2.1' },
+                { group: '3.1' },
+                { group: '4.1' },
+                { group: '5.1' },
+            ],
+            groups2: [
+                { group: '1.2' },
+                { group: '2.2' },
+                { group: '3.2' },
+                { group: '4.2' },
+                { group: '5.2' },
+            ],
+            groups3: [
+                { group: '1.3' },
+                { group: '2.3' },
+                { group: '3.3' },
+                { group: '4.3' },
+                { group: '5.3' },
+            ],
+            groups4: [
+                { group: '1.4' },
+                { group: '2.4' },
+                { group: '3.4' },
+                { group: '4.4' },
+                { group: '5.4' },
             ]
         }
     },
