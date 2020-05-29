@@ -15,21 +15,173 @@
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
             <h3>Расписание группы {{groupNumber}}</h3>
-            <div class="card day">
+            <div>
                 <div class="card-header name-day">
                     Понедельник
                 </div>
-                <div class="card-body">
+                <div class="card-body" v-for="(item, index) in timetable1" :key="item.day.value">
                     <div class="lesson">
                         <div class="row">
-                            <div class="col-7">1 <span class="time">8:30-9:15</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable">каб. 206</a></div>
+                            <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
-                            <div class="col-12"> 
-                                <span class="lesson_name">Информатика</span>
+                            <div class="col-12" v-if="item.day.name != null"> 
+                                <span class="lesson_name">{{item.day.name}}</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameF != null"> 
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameS != null"> 
+                                <span class="lesson_name">{{item.day.nameS}}</span>
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">Петров Игорь Иванович</a></p>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
+                                <span class="lesson_name">Окно</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header name-day">
+                    Вторник
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable2" :key="item.day.value">
+                    <div class="lesson">
+                        <div class="row">
+                            <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" v-if="item.day.name != null"> 
+                                <span class="lesson_name">{{item.day.name}}</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameF != null"> 
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameS != null"> 
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
+                                <span class="lesson_name">Окно</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header name-day">
+                    Среда
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable3" :key="item.day.value">
+                    <div class="lesson">
+                        <div class="row">
+                            <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" v-if="item.day.name != null"> 
+                                <span class="lesson_name">{{item.day.name}}</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameF != null"> 
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameS != null"> 
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
+                                <span class="lesson_name">Окно</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header name-day">
+                    Четверг
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable4" :key="item.day.value">
+                    <div class="lesson">
+                        <div class="row">
+                            <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" v-if="item.day.name != null"> 
+                                <span class="lesson_name">{{item.day.name}}</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameF != null"> 
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameS != null"> 
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
+                                <span class="lesson_name">Окно</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header name-day">
+                    Пятница
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable5" :key="item.day.value">
+                    <div class="lesson">
+                        <div class="row">
+                            <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" v-if="item.day.name != null"> 
+                                <span class="lesson_name">{{item.day.name}}</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameF != null"> 
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.nameS != null"> 
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
+                            <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
+                                <span class="lesson_name">Окно</span>
+                                <span class="square square-0" data-tooltip="Еженедельно"></span>
                             </div>
                         </div>
                     </div>
@@ -39,19 +191,164 @@
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
             <h3 style="text-align: center;">Расписание группы {{groupNumber}}</h3>
+
             <div class="card day">
                 <div class="card-header name-day">
                     Понедельник
                 </div>
-                <div class="card-body">
+                <div class="card-body" v-for="(item, index) in timetable1" :key="item.day.value">
                     <div class="row  lesson">
-                        <div class="col-4">1 <span class="time">8:30-9:15</span></div>
-                        <div class="col-6">
-                            <span class="square square-2" data-tooltip="Четная неделя"></span>
-                            <span class="lesson_name">Информатика</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">Петров Игорь Иванович</a></p>
+                        <div class="col-4">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                        <div class="col-6" v-if="item.day.name != null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">{{item.day.name}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
-                        <div class="col-2"> <a class="s_link" href="classroom-timetable">каб. 206</a> </div>
+                        <div class="col-6" v-if="item.day.nameF != null">
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameF}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameS != null">
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameS}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">Окно</span>
+                        </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card day">
+                <div class="card-header name-day">
+                    Вторник
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable2" :key="item.day.value">
+                    <div class="row  lesson">
+                        <div class="col-4">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                        <div class="col-6" v-if="item.day.name != null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">{{item.day.name}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameF != null">
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameF}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameS != null">
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameS}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">Окно</span>
+                        </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card day">
+                <div class="card-header name-day">
+                    Среда
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable3" :key="item.day.value">
+                    <div class="row  lesson">
+                        <div class="col-4">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                        <div class="col-6" v-if="item.day.name != null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">{{item.day.name}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameF != null">
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameF}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameS != null">
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameS}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">Окно</span>
+                        </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card day">
+                <div class="card-header name-day">
+                    Четверг
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable4" :key="item.day.value">
+                    <div class="row  lesson">
+                        <div class="col-4">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                        <div class="col-6" v-if="item.day.name != null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">{{item.day.name}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameF != null">
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameF}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameS != null">
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameS}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">Окно</span>
+                        </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card day">
+                <div class="card-header name-day">
+                    Пятница
+                </div>
+                <div class="card-body" v-for="(item, index) in timetable5" :key="item.day.value">
+                   <div class="row  lesson">
+                        <div class="col-4">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
+                        <div class="col-6" v-if="item.day.name != null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">{{item.day.name}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameF != null">
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameF}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.nameS != null">
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                            <span class="lesson_name">{{item.day.nameS}}</span>
+                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                        </div>
+                        <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
+                            <span class="square square-0" data-tooltip="Еженедельно"></span>
+                            <span class="lesson_name">Окно</span>
+                        </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
@@ -60,12 +357,49 @@
 </template>
 
 <script>
-
+import needle from 'needle'
 export default {
     name: 'Group',
     data(){
+        let t = 0
+        let timetable1 = []
+        let timetable2 = []
+        let timetable3 = []
+        let timetable4 = []
+        let timetable5 = []
+        let group = this.$route.params.id.replace(/-/g, function (match) {
+            t++;
+            return (t === 2) ? "/" : match;
+        });
+        needle.post('http://37.228.118.76:3001/api2/getGroup', {group: group}, {"json": true}, function(err, res){
+            if(err) throw err
+            else{
+                console.log(res.body)
+                for(let i = 0; i < 5; i++){
+                    timetable1.push({day: res.body.day[0][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable2.push({day: res.body.day[1][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable3.push({day: res.body.day[2][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable4.push({day: res.body.day[3][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable5.push({day: res.body.day[4][i]})
+                }
+                console.log(timetable1)
+            }
+        })
         return{
-            groupNumber: this.$route.params.id
+            groupNumber: this.$route.params.id,
+            timetable1,
+            timetable2,
+            timetable3,
+            timetable4,
+            timetable5,
         }
     },   
 }
