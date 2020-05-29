@@ -374,7 +374,6 @@ export default {
         needle.post('http://37.228.118.76:3001/api2/getGroup', {group: group}, {"json": true}, function(err, res){
             if(err) throw err
             else{
-                console.log(res.body)
                 for(let i = 0; i < 5; i++){
                     timetable1.push({day: res.body.day[0][i]})
                 }
@@ -390,7 +389,6 @@ export default {
                 for(let i = 0; i < 5; i++){
                     timetable5.push({day: res.body.day[4][i]})
                 }
-                console.log(timetable1)
             }
         })
         return{
