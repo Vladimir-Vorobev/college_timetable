@@ -13,25 +13,25 @@
                 <div class="grade row">
                     <span class="num_grade col-12">1 курс</span>
                     <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups1" :key="item.group">
-                        <div class="name_group"> Группа {{ item.group }} </div>
+                        <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">2 курс</span>
                     <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups2" :key="item.group">
-                        <div class="name_group"> Группа {{ item.group }} </div>
+                        <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">3 курс</span>
                     <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups3" :key="item.group">
-                        <div class="name_group"> Группа {{ item.group }} </div>
+                        <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">4 курс</span>
                     <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups4" :key="item.group">
-                        <div class="name_group"> Группа {{ item.group }} </div>
+                        <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
         </div>
