@@ -24,26 +24,26 @@
                         <div class="row">
                             <div class="col-7">{{index + 1}} <span class="time">{{item.day.time}}</span></div>
                             <div class="col-5">
-                                <a class="s_link" href="schedule_class.html">каб. {{item.day.classroomF}}</a>
+                                <a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12"> 
                                 <span class="lesson_name">{{item.day.nameF}}</span>
                                 <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12" style="text-align: end; padding-right: 30px;">
-                                <a class="s_link" href="schedule_class.html">каб. {{item.day.classroomS}}</a>
+                                <a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
+                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
                             </div>
                         </div>
                     </div>
