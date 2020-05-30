@@ -65,14 +65,40 @@ export default {
     name: 'Teacher',
     data(){
         let teacher = this.$route.params.id
+        let timetable1 = []
+        let timetable2 = []
+        let timetable3 = []
+        let timetable4 = []
+        let timetable5 = []
         needle.post('http://37.228.118.76:3001/api2/getTeacher', {teacher: teacher}, {"json": true}, function(err, res){
             if(err) throw err
             else{
                 console.log(res.body)
+                for(let i = 0; i < 5; i++){
+                    timetable1.push({day: res.body[0][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable2.push({day: res.body[1][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable3.push({day: res.body[2][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable4.push({day: res.body[3][i]})
+                }
+                for(let i = 0; i < 5; i++){
+                    timetable5.push({day: res.body[4][i]})
+                }
+                console.log(timetable1, timetable2, timetable3, timetable4, timetable5)
             }
         })
         return{
-            teacher
+            teacher,
+            timetable1,
+            timetable2,
+            timetable3,
+            timetable4,
+            timetable5,
         }
     },
 }
