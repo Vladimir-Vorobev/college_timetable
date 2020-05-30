@@ -50,9 +50,9 @@
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
@@ -111,9 +111,9 @@
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
@@ -172,9 +172,9 @@
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
@@ -233,9 +233,9 @@
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
@@ -294,9 +294,9 @@
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.name != null">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5"><a class="s_link" href="classroom-timetable" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
+                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
+                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
@@ -368,9 +368,9 @@
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
                             <span class="lesson_name">Окно</span>
                         </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
@@ -415,9 +415,9 @@
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
                             <span class="lesson_name">Окно</span>
                         </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
@@ -462,9 +462,9 @@
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
                             <span class="lesson_name">Окно</span>
                         </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
@@ -511,9 +511,9 @@
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
                             <span class="lesson_name">Окно</span>
                         </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
@@ -558,9 +558,9 @@
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
                             <span class="lesson_name">Окно</span>
                         </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom" v-if="item.day.name != null">каб. {{item.day.classroom}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF" v-if="item.day.nameF != null">каб. {{item.day.classroomF}}</router-link> </div>
-                        <div class="col-2"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS" v-if="item.day.nameS != null">каб. {{item.day.classroomS}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                        <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                     </div>
                 </div>
             </div>
