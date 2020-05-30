@@ -285,7 +285,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                                 <p class="group"><a class="s_link" href="schedule_teacher.html">{{item.day.groupS}}</a></p>
                             </div>
                         </div>
