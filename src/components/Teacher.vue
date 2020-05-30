@@ -64,14 +64,15 @@ import needle from 'needle'
 export default {
     name: 'Teacher',
     data(){
-        needle.post('http://37.228.118.76:3001/api2/getTeacher', {teacher: this.$route.params.id}, {"json": true}, function(err, res){
+        let teacher = this.$route.params.id
+        needle.post('http://37.228.118.76:3001/api2/getTeacher', {teacher: teacher}, {"json": true}, function(err, res){
             if(err) throw err
             else{
                 console.log(res.body)
             }
         })
         return{
-            teacher: this.$route.params.id
+            teacher
         }
     },
 }

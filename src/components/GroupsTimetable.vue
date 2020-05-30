@@ -12,25 +12,25 @@
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none list">
                 <div class="grade row">
                     <span class="num_grade col-12">1 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups1" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups1" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">2 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups2" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '-')" v-for="item in groups2" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">3 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups3" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups3" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade row">
                     <span class="num_grade col-12">4 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups4" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups4" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
@@ -40,25 +40,25 @@
             <div class="row">
                 <div class="grade col-3">
                     <span class="num_grade">1 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups1" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups1" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">2 курс</span>
-                   <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups2" :key="item.group">
+                   <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups2" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">3 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups3" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups3" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
                 <div class="grade col-3">
                     <span class="num_grade">4 курс</span>
-                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group" v-for="item in groups4" :key="item.group">
+                    <router-link style="width: 100%;" class="group_link" :to="'/groups-timetable/' + item.group.replace(/([/]+)/g, '*')" v-for="item in groups4" :key="item.group">
                         <div class="name_group">{{ item.group }}</div>
                     </router-link> 
                 </div>
@@ -85,16 +85,16 @@ export default {
         })
         .then(data => {
             for(let i = 0; i < data[0].length; i++){
-                groups1.push({group: data[0][i].replace(/([/]+)/g, '-')})
+                groups1.push({group: data[0][i]})
             }
             for(let i = 0; i < data[1].length; i++){
-                groups2.push({group: data[1][i].replace(/([/]+)/g, '-')})
+                groups2.push({group: data[1][i]})
             }
             for(let i = 0; i < data[2].length; i++){
-                groups3.push({group: data[2][i].replace(/([/]+)/g, '-')})
+                groups3.push({group: data[2][i]})
             }
             for(let i = 0; i < data[3].length; i++){
-                groups4.push({group: data[3][i].replace(/([/]+)/g, '-')})
+                groups4.push({group: data[3][i]})
             }
         })
         return{

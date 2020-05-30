@@ -14,7 +14,7 @@
     <div class="main">
         <!--Mobile-->
         <div class="d-block d-sm-block d-md-block d-lg-none d-xl-none">
-            <h3>Расписание группы {{groupNumber}}</h3>
+            <h3>Расписание группы {{group}}</h3>
             <div>
                 <div class="card-header name-day">
                     Понедельник
@@ -190,7 +190,7 @@
         </div>
         <!-- PC -->
         <div class="container d-none d-sm-none d-md-none d-lg-block d-xl-block">
-            <h3 style="text-align: center;">Расписание группы {{groupNumber}}</h3>
+            <h3 style="text-align: center;">Расписание группы {{group}}</h3>
 
             <div class="card day">
                 <div class="card-header name-day">
@@ -205,14 +205,18 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Четная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameF}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameS}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
@@ -237,14 +241,18 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Четная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameF}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameS}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
@@ -269,14 +277,18 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Четная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameF}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameS}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameS}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
                             <span class="square square-0" data-tooltip="Еженедельно"></span>
@@ -301,9 +313,11 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Четная неделя"></span>
-                            <span class="lesson_name">{{item.day.nameF}}</span>
-                            <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            <div class="row  lesson">
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
+                                <span class="lesson_name">{{item.day.nameF}}</span>
+                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                            </div>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
@@ -361,16 +375,13 @@ import needle from 'needle'
 export default {
     name: 'Group',
     data(){
-        let t = 0
         let timetable1 = []
         let timetable2 = []
         let timetable3 = []
         let timetable4 = []
         let timetable5 = []
-        let group = this.$route.params.id.replace(/-/g, function (match) {
-            t++;
-            return (t === 2) ? "/" : match;
-        });
+        let group = this.$route.params.id
+        group = group.replace(group[group.lastIndexOf('*')], '/')
         needle.post('http://37.228.118.76:3001/api2/getGroup', {group: group}, {"json": true}, function(err, res){
             if(err) throw err
             else{
@@ -392,7 +403,7 @@ export default {
             }
         })
         return{
-            groupNumber: this.$route.params.id,
+            group,
             timetable1,
             timetable2,
             timetable3,
