@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <span class="square square-1" data-tooltip="Четная неделя"></span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                             </div>
                         </div>
@@ -103,7 +103,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <span class="square square-1" data-tooltip="Четная неделя"></span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <span class="square square-1" data-tooltip="Четная неделя"></span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                             </div>
                         </div>
@@ -286,7 +286,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <span class="square square-1" data-tooltip="Четная неделя"></span>
+                                <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                             </div>
                         </div>
@@ -338,7 +338,7 @@
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                         </div>
@@ -385,7 +385,7 @@
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                         </div>
@@ -432,7 +432,7 @@
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                         </div>
@@ -479,7 +479,7 @@
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                         </div>
@@ -528,7 +528,7 @@
                             <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherF}}</a></p>
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="schedule_teacher.html">{{item.day.teacherS}}</a></p>
                         </div>
