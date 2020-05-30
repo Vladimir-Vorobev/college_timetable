@@ -355,12 +355,12 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
                         </div>
@@ -402,12 +402,12 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
                         </div>
@@ -449,12 +449,12 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
                         </div>
@@ -497,13 +497,13 @@
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
                             <div class="row  lesson">
-                                <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                                <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                                 <span class="lesson_name">{{item.day.nameF}}</span>
                                 <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
                             </div>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
                         </div>
@@ -545,12 +545,12 @@
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameF != null">
-                            <span class="square square-2" data-tooltip="Нечетная неделя"></span>
+                            <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                             <span class="lesson_name">{{item.day.nameF}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
                         </div>
                         <div class="col-6" v-if="item.day.nameS != null">
-                            <span class="square square-1" data-tooltip="Четная неделя"></span>
+                            <span class="square square-2" data-tooltip="Четная неделя"></span>
                             <span class="lesson_name">{{item.day.nameS}}</span>
                             <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
                         </div>
