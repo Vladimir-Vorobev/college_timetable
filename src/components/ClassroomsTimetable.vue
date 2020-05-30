@@ -6,8 +6,8 @@
             <option value="/classrooms-timetable" selected>Расписание аудиторий</option>
         </select>
         <div class="list">
-            <router-link class="name" :to="'/classrooms-timetable/' + item.classroom" v-for="item in classrooms" :key="item.classroom">
-                <div class="name_group">{{ item.classroom }} </div>
+            <router-link class="name" :to="'/classrooms-timetable/' + item.classroom.replace(/([/]+)/g, '*')" v-for="item in classrooms" :key="item.classroom">
+                <div class="name_group">Аудитория {{ item.classroom }} </div>
             </router-link> 
         </div>
     </div>

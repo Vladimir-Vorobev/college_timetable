@@ -65,6 +65,7 @@ export default {
     name: 'Classroom',
     data(){
         let classroom = this.$route.params.id
+        classroom = classroom.replace(classroom[classroom.lastIndexOf('*')], '/')
         needle.post('http://37.228.118.76:3001/api2/getClassroom', {classroom: classroom}, {"json": true}, function(err, res){
             if(err) throw err
             else{
