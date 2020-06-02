@@ -24,51 +24,51 @@
                         <div class="row">
                             <div class="col-7">{{index2 + 1}} <span class="time">{{item.day.time}}</span></div>
                             <div class="col-5">
-                                <a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a>
+                                <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12"> 
                                 <span class="lesson_name">{{item.day.nameF}}</span>
                                 <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherF">{{item.day.teacherF}}</router-link></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12" style="text-align: end; padding-right: 30px;">
-                                <a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a>
+                                <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherS">{{item.day.teacherS}}</router-link></p>
                             </div>
                         </div>
                     </div>
                     <div class="lesson" v-else>
                         <div class="row">
                             <div class="col-7">{{index2 + 1}}<span class="time">{{item.day.time}}</span></div>
-                            <div class="col-5" v-if="item.day.name != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroom}}</a></div>
-                            <div class="col-5" v-if="item.day.nameF != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomF}}</a></div>
-                            <div class="col-5" v-if="item.day.nameS != null"><a class="s_link" href="classroom-timetable">каб. {{item.day.classroomS}}</a></div>
+                            <div class="col-5" v-if="item.day.name != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                            <div class="col-5" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                            <div class="col-5" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                         </div>
                         <div class="row">
                             <div class="col-12" v-if="item.day.name != null"> 
                                 <span class="lesson_name">{{item.day.name}}</span>
                                 <span class="square square-0" data-tooltip="Еженедельно"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacher}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacher">{{item.day.teacher}}</router-link></p>
                             </div>
                             <div class="col-12" v-if="item.day.nameF != null"> 
                                 <span class="lesson_name">{{item.day.nameF}}</span>
                                 <span class="square square-1" data-tooltip="Нечетная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherF}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherF">{{item.day.teacherF}}</router-link></p>
                             </div>
-                            <div class="col-12" v-if="item.day.nameS != null"> 
+                            <div class="col-12" v-if="item.day.nameS != null">
                                 <span class="lesson_name">{{item.day.nameS}}</span>
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
-                                <p class="teacher"><a class="s_link" href="teacher-timetable">{{item.day.teacherS}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherS">{{item.day.teacherS}}</router-link></p>
                             </div>
                             <div class="col-12" v-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null"> 
                                 <span class="lesson_name">Окно</span>
@@ -108,25 +108,25 @@
                             <div class="col-6" v-if="item.day.name != null">
                                 <span class="square square-0" data-tooltip="Еженедельно"></span>
                                 <span class="lesson_name">{{item.day.name}}</span>
-                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacher}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacher">{{item.day.teacher}}</router-link></p>
                             </div>
                             <div class="col-6" v-else-if="item.day.nameF != null">
                                 <span class="square square-1" data-tooltip="Нечетная неделя"></span>
                                 <span class="lesson_name">{{item.day.nameF}}</span>
-                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherF}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherF">{{item.day.teacherF}}</router-link></p>
                             </div>
                             <div class="col-6" v-else-if="item.day.nameS != null">
                                 <span class="square square-2" data-tooltip="Четная неделя"></span>
                                 <span class="lesson_name">{{item.day.nameS}}</span>
-                                <p class="teacher"><a class="s_link" href="teachers-timetable">{{item.day.teacherS}}</a></p>
+                                <p class="teacher"><router-link class="s_link" :to="'/teachers-timetable/' + item.day.teacherS">{{item.day.teacherS}}</router-link></p>
                             </div>
                             <div class="col-6" v-else-if="item.day.name == null && item.day.nameF == null && item.day.nameS == null">
                                 <span class="square square-0" data-tooltip="Еженедельно"></span>
                                 <span class="lesson_name">Окно</span>
                             </div>
-                            <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
-                            <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
-                            <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/groups-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
+                            <div class="col-2" v-if="item.day.name != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroom">каб. {{item.day.classroom}}</router-link> </div>
+                            <div class="col-2" v-if="item.day.nameF != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroomF">каб. {{item.day.classroomF}}</router-link> </div>
+                            <div class="col-2" v-if="item.day.nameS != null"> <router-link class="s_link" :to="'/classrooms-timetable/' + item.day.classroomS">каб. {{item.day.classroomS}}</router-link> </div>
                         </div>
                     </div>
                 </div>
